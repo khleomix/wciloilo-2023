@@ -1,4 +1,4 @@
-# WordCamp Iloilo 2023 Style Guide
+# WordCamp Iloilo 2023 Remote CSS
 WordCamp Iloilo is using the TwentyTwentyThree theme's site editor with custom styles.
 
 ## Connecting style guide
