@@ -1,0 +1,283 @@
+/*
+Theme Name: WordCamp Iloilo 2023
+Theme URI: https://iloilo.wordcamp.org/2023
+Author: JC Palmes
+Author URI: https://khleomix.com
+*/
+
+// Global Styles.
+html,
+body {
+	overflow-x: hidden;
+}
+
+// Navigation Styles.
+
+.wp-block-navigation a:where(:not(.wp-element-button)) {
+	display: inline-block;
+	overflow: hidden;
+	padding: 10px 20px;
+	position: relative;
+	transition: 0.3s ease-out;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button)):hover,
+.wp-block-navigation a:where(:not(.wp-element-button)):active {
+	color: #e2cfa9;
+	text-decoration: none;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button)):hover span,
+.wp-block-navigation a:where(:not(.wp-element-button)):active span {
+	color: #e2cfa9;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button))::before {
+	background: transparent;
+	border-right: 2px solid #e2cfa9;
+	border-top: 2px solid #e2cfa9;
+	content: "";
+	height: 5px;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: 0.3s;
+	width: 5px;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button))::after {
+	background: transparent;
+	border-bottom: 2px solid #e2cfa9;
+	border-left: 2px solid #e2cfa9;
+	bottom: 0;
+	content: "";
+	height: 5px;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	transition: 0.3s;
+	width: 5px;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button)) span::before {
+	background: transparent;
+	border-left: 2px solid #e2cfa9;
+	border-top: 2px solid #e2cfa9;
+	content: "";
+	height: 5px;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	transition: 0.3s;
+	width: 5px;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button)) span::after {
+	background: transparent;
+	border-bottom: 2px solid #e2cfa9;
+	border-right: 2px solid #e2cfa9;
+	bottom: 0;
+	content: "";
+	height: 5px;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	transition: 0.3s;
+	width: 5px;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button)):hover span::before,
+.wp-block-navigation a:where(:not(.wp-element-button)):active span::before {
+	left: 5px;
+	opacity: 1;
+	top: 5px;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button)):hover span::after,
+.wp-block-navigation a:where(:not(.wp-element-button)):active span::after {
+	bottom: 5px;
+	opacity: 1;
+	right: 5px;
+}
+
+// Button and Links.
+.wp-element-button,
+.wp-block-button__link {
+	backface-visibility: hidden;
+	background: #fff !important;
+	border-radius: 0 !important;
+	border: 1px solid #b69774;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	color: #b69774 !important;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 400;
+	outline: none;
+	position: relative;
+	text-decoration: none;
+	text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+	text-transform: uppercase;
+	transform: translateZ(0);
+	transition-duration: 0.3s;
+	transition-property: color;
+	vertical-align: middle;
+}
+
+.wp-element-button:hover,
+.wp-block-button__link:hover,
+.wp-element-button:focus,
+.wp-block-button__link:focus,
+.wp-element-button:active,
+.wp-block-button__link:active {
+	color: #000 !important;
+}
+
+.wp-element-button::before,
+.wp-block-button__link::before {
+	background: #e2cfa9 !important;
+	bottom: 0;
+	content: "";
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform-origin: 50% 0;
+	transform: scaleY(0);
+	transition-duration: 0.3s;
+	transition-property: transform;
+	transition-timing-function: ease-out;
+	z-index: -1;
+}
+
+.wp-element-button:hover::before,
+.wp-block-button__link:hover::before,
+.wp-element-button:focus::before,
+.wp-block-button__link:focus::before,
+.wp-element-button:active::before,
+.wp-block-button__link:active::before {
+	color: #fff;
+	transform: scaleY(1);
+}
+
+a:where(:not(.wp-element-button)),
+.wp-block-post-title a:where(:not(.wp-element-button)) {
+	padding: 10px 0;
+	position: relative;
+	text-decoration: none !important;
+	transition: ease-out 0.3s 0.1s;
+}
+
+a:where(:not(.wp-element-button))::after,
+.wp-block-post-title a:where(:not(.wp-element-button))::after {
+	background: #b69774;
+	bottom: 0;
+	color: #b69774;
+	content: "";
+	height: 2px;
+	left: 0;
+	position: absolute;
+	transform: scaleX(0);
+	transition: 0.3s;
+	width: 100%;
+}
+
+a:where(:not(.wp-element-button)):hover,
+.wp-block-post-title a:where(:not(.wp-element-button)):hover {
+	outline-width: 0;
+}
+
+a:where(:not(.wp-element-button)):hover::after,
+.wp-block-post-title a:where(:not(.wp-element-button)):hover::after {
+	transform: scaleX(1);
+}
+
+.wp-block-post-featured-image a {
+	padding: 0;
+}
+
+.wp-block-post-featured-image a::after,
+.custom-logo-link::after {
+	display: none;
+}
+
+// Post thumbnails.
+.has-post-thumbnail .wp-block-post-featured-image {
+	background-color: #e6e6e6;
+	overflow: hidden;
+}
+
+.sponsors-grid .has-post-thumbnail .wp-block-post-featured-image {
+	background-color: #fff;
+}
+
+.has-post-thumbnail .wp-block-post-featured-image::before {
+	background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+	content: "";
+	display: block;
+	height: 100%;
+	left: -75%;
+	position: absolute;
+	top: 0;
+	transform: skewX(-25deg);
+	width: 50%;
+	z-index: 2;
+}
+
+.has-post-thumbnail .wp-block-post-featured-image:hover::before {
+	animation: shine 0.75s;
+}
+
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+// Style Overrides.
+.wp-site-blocks:first-of-type {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+header.wp-block-template-part {
+	position: relative;
+}
+
+header.wp-block-template-part::after {
+	background: url(https://iloilo.wordcamp.org/2023/files/2023/04/wci-tilestrip.png) repeat-x top center / contain;
+	content: "";
+	height: 129px;
+	position: absolute;
+	width: 100vw;
+}
+
+.home .wp-block-query .wp-block-post-template {
+	padding: 50px 10vw;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+	.wp-block-buttons {
+		flex-direction: column;
+	}
+
+	.wp-block-buttons > .wp-block-button.has-custom-width {
+		max-width: 80vw !important;
+		min-width: 250px;
+	}
+}
+
+@media (min-width: 411px) and (max-width: 768px) {
+	.wp-block-post-template.is-flex-container.is-flex-container.columns-3 > li {
+		width: calc(50% - 0.625em);
+	}
+}
+
+@media only screen and (max-width: 410px) {
+	.wp-block-post-template.is-flex-container.is-flex-container.columns-3 > li {
+		width: calc(100% - 0.625em);
+	}
+}
