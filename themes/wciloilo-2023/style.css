@@ -4,3 +4,118 @@ Theme URI: https://iloilo.wordcamp.org/2023
 Author: JC Palmes
 Author URI: https://khleomix.com
 */
+
+// Global Styles.
+html,
+body {
+	overflow-x: hidden;
+}
+
+// Navigation Styles.
+
+.wp-block-navigation a:where(:not(.wp-element-button)) {
+	display: inline-block;
+	overflow: hidden;
+	padding: 10px 20px;
+	position: relative;
+	transition: 0.3s ease-out;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button)):hover,
+.wp-block-navigation a:where(:not(.wp-element-button)):active {
+	color: #e2cfa9;
+	text-decoration: none;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button)):hover span,
+.wp-block-navigation a:where(:not(.wp-element-button)):active span {
+	color: #e2cfa9;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button))::before {
+	background: transparent;
+	border-right: 2px solid #e2cfa9;
+	border-top: 2px solid #e2cfa9;
+	content: "";
+	height: 5px;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: 0.3s;
+	width: 5px;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button))::after {
+	background: transparent;
+	border-bottom: 2px solid #e2cfa9;
+	border-left: 2px solid #e2cfa9;
+	bottom: 0;
+	content: "";
+	height: 5px;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	transition: 0.3s;
+	width: 5px;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button)) span::before {
+	background: transparent;
+	border-left: 2px solid #e2cfa9;
+	border-top: 2px solid #e2cfa9;
+	content: "";
+	height: 5px;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	transition: 0.3s;
+	width: 5px;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button)) span::after {
+	background: transparent;
+	border-bottom: 2px solid #e2cfa9;
+	border-right: 2px solid #e2cfa9;
+	bottom: 0;
+	content: "";
+	height: 5px;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	transition: 0.3s;
+	width: 5px;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button)):hover span::before,
+.wp-block-navigation a:where(:not(.wp-element-button)):active span::before {
+	left: 5px;
+	opacity: 1;
+	top: 5px;
+}
+
+.wp-block-navigation a:where(:not(.wp-element-button)):hover span::after,
+.wp-block-navigation a:where(:not(.wp-element-button)):active span::after {
+	bottom: 5px;
+	opacity: 1;
+	right: 5px;
+}
+
+// Style Overrides.
+.wp-site-blocks:first-of-type {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+header.wp-block-template-part {
+	position: relative;
+}
+
+header.wp-block-template-part::after {
+	background: url(https://iloilo.wordcamp.org/2023/files/2023/04/wci-tilestrip.png) repeat-x top center / contain;
+	content: "";
+	height: 129px;
+	position: absolute;
+	width: 100vw;
+}
