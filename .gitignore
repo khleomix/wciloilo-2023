@@ -27,6 +27,7 @@ vendor/
 # theme
 /themes/*
 !/themes/twentytwentythree
+!/themes/wciloilo-2023
 
 # site specific folders
 /pdf-light-viewer-logs
