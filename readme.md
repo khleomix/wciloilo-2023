@@ -1,5 +1,5 @@
 # WordCamp Iloilo 2023 Style Guide
-WordCamp Iloilo is using the TwentyTwentyThree's site editor with custom styles.
+WordCamp Iloilo is using the TwentyTwentyThree theme's site editor with custom styles.
 
 ## Connecting style guide
 
