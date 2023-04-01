@@ -11,6 +11,11 @@ body {
 	overflow-x: hidden;
 }
 
+.wp-site-blocks:first-of-type {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
 // Navigation Styles.
 
 .wp-block-navigation a:where(:not(.wp-element-button)) {
@@ -205,7 +210,7 @@ a:where(:not(.wp-element-button)):hover::after,
 // Post thumbnails.
 .has-post-thumbnail .wp-block-post-featured-image {
 	background-color: #e6e6e6;
-	overflow: hidden;
+	overflow: hidden !important;
 }
 
 .sponsors-grid .has-post-thumbnail .wp-block-post-featured-image {
@@ -236,11 +241,6 @@ a:where(:not(.wp-element-button)):hover::after,
 }
 
 // Style Overrides.
-.wp-site-blocks:first-of-type {
-	padding-bottom: 0;
-	padding-top: 0;
-}
-
 header.wp-block-template-part {
 	position: relative;
 }
